@@ -4,4 +4,3 @@ applications:
   host: simple-website-naderkz
   name: simple-website-naderkz
   memory: 64M
-  stack: cflinuxfs2
