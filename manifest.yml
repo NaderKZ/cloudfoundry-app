@@ -1,6 +1,6 @@
 ---
 applications:
 - buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
-  host: simple-website-naderkz
-  name: simple-website-naderkz
+  host: dev-website-naderkz
+  name: dev-website-naderkz
   memory: 64M

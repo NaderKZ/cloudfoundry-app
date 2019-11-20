@@ -9,29 +9,36 @@
  	<head>
 		<title>Chuck</title>
 	</head>
-	<body>
+	<body >
 	
 		<!-- This creates a header with text in it before the button -->	
+		<div class="d-flex justify-content-center"  style= "padding-top: 8%;">
 		<h1>
-			Hello World, Chuck Norris app.
-   	   
+			Chuck Norris in development
 		</h1>
+		</div>
 		
 		<!-- This creates a button and sets the action taken when it is clicked -->	
-   	   	<button type="button" onclick="myfunction()">
-			Click me to get a chuck norris joke.
+		<div class="d-flex justify-content-center"  style= "padding-top: 2%;">
+   	   	<button id="btn" type="button" class="btn btn-danger" onclick="myfunction()">
+			Chuck Norris orders you to click me
 		</button>
+		</div>
 		
 		<!-- The following is the Javascript function responsible for making the API call and displaying the results on the application page-->
 		<script>
 			function myfunction() {
+				var imageURL = "./images/chuck" + Math.floor(Math.random() * 5) + ".gif";
 			
+				document.getElementById("btn").innerText  = "Chuck Norris dares you to click me again";
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
 						var jsonobject = JSON.parse(this.responseText)
-						document.getElementById("demo").innerHTML = jsonobject.value;
+						document.getElementById("demo").innerHTML = '"'+jsonobject.value+'"';
 						console.log(this.responseText)
+						document.getElementById("chif").src= imageURL;
+						
 					}
 				};
 				xhttp.open("GET", "https://api.chucknorris.io/jokes/random?category=dev", true);
@@ -41,6 +48,13 @@
 		</script>
 		
 		<!-- This is a placeholder where the answer from the API call ends up-->
-		<h4 id="demo"></h4>
+		<div class="d-flex justify-content-center"  style= "padding-top: 5%;">
+		<h3 id="demo"></h3>
+		</div>
+		
+		<!-- This is a placeholder for Chuck Norris GIF -->
+		<div class="d-flex justify-content-center"  style= "padding-top: 2%;">
+			<img id="chif"  src="" class="rounded mx-auto d-block" style="max-width: 400px; max-height: 400px;" >
+		</div>
  	</body>
  </html>
