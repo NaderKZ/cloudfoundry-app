@@ -13,7 +13,7 @@
 	
 1. ### Weather Forecast Application:
 	
-	This is an example application that uses a [weather forecast](https://openweathermap.org/api) API to sho the current weather forecast for a specific city.
+	This is an example application that uses a [weather forecast](https://openweathermap.org/api) API to show the current weather forecast for a specific city.
 	
 	#### How to use:
 	
