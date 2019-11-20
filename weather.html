@@ -1,3 +1,5 @@
+<!-- This is a smiple weather forecast app where a user can enter a name of a city and get the current temperature of that city 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +11,17 @@
     
 </head>
 <body>
+	
+	<!-- This creates the label before the input field -->
 	<label for="name">City:</label>
 
+	<!-- This creates the input field and assigns it a uniques ID-->
 	<input type="text" id="location" name="location" required>
+	
+	<!-- This creates the button to trigger the API call -->
 	<button type="button" onclick="myfunction()">Go</button>
 	
-	
+	<!-- The following is the Javascript function responsible for making the API call and displaying the results on the application page-->
 	<script>
 		
 		function myfunction() {
@@ -36,6 +43,7 @@
 		}
 		
 	</script>
+	<!-- This is a placeholder where the answer from the API call ends up-->
 	<h4 id="demo"></h4>
 </body>
 </html>

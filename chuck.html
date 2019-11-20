@@ -1,3 +1,5 @@
+<!-- This is a smiple application that where a user can click a button and get a random Chuck Norris joke
+-->
  <!DOCTYPE html>
  <html lang="en">
 	
@@ -8,13 +10,19 @@
 		<title>Chuck</title>
 	</head>
 	<body>
+	
+		<!-- This creates a header with text in it before the button -->	
 		<h1>
 			Hello World, Chuck Norris app.
    	   
 		</h1>
+		
+		<!-- This creates a button and sets the action taken when it is clicked -->	
    	   	<button type="button" onclick="myfunction()">
 			Click me to get a chuck norris joke.
 		</button>
+		
+		<!-- The following is the Javascript function responsible for making the API call and displaying the results on the application page-->
 		<script>
 			function myfunction() {
 			
@@ -31,6 +39,8 @@
 			}
 			
 		</script>
+		
+		<!-- This is a placeholder where the answer from the API call ends up-->
 		<h4 id="demo"></h4>
  	</body>
  </html>
