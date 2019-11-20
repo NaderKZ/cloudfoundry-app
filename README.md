@@ -17,4 +17,4 @@
 	
 	#### How to use:
 	
-		Open the website and write a city name in the input field, then click on **Go** button. The application will tell you the current weather in that city in Celsius 
+		Open the website and write a city name in the input field, then click on "Go" button. The application will tell you the current weather in that city in Celsius 
