@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+    <title>Weather Forecast</title>
+    
+</head>
+<body>
+	<label for="name">City:</label>
+
+	<input type="text" id="location" name="location" required>
+	<button type="button" onclick="myfunction()">Go</button>
+	
+	
+	<script>
+		
+		function myfunction() {
+		
+			document.getElementById("location").onfocus= function() {document.getElementById("location").value=""};
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					var jsonobject = JSON.parse(this.responseText);
+					var temp = jsonobject.main["temp"];
+					document.getElementById("demo").innerHTML = "It is: " + Math.round(temp) + " c";
+					<!--console.log(this.responseText)
+				}
+			};
+			var loc = document.getElementById("location").value;
+			<!--console.log(loc)
+			xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q="+loc+"&units=metric&APPID=a9b52b6d3cfdd22bee46db1dba09f85e", true);
+			xhttp.send();			
+		}
+		
+	</script>
+	<h4 id="demo"></h4>
+</body>
+</html>
+
